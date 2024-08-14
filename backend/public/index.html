@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Duro API</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Server Is Running</h1>
+			<br />
+			<br />
+			<h2>This server establishes the duro api.</h2>
+			<br />
+			<h2>- Database <span id="db-status">Connecting...</span> -</h2>
+			<br />
+			<br />
+			<p>This page refreshes every 30</p>
+			<p>seconds to check api connections.</p>
+			<br />
+			<p>Built with express + nodejs</p>
+			<p>Copyright (c) 2023 duro</p>
+			<br />
+			<button id="client-site-btn">Visit Client</button>
+		</div>
+
+		<script>
+			// Document elements
+			const clientButton = document.getElementById("client-site-btn");
+			const dbStatus = document.getElementById("db-status");
+
+			// Fetch client URL
+			fetch("/client_url")
+				.then((response) => response.json())
+				.then((client) => {
+					const CLIENT_URL = client.clientUrl;
+					clientButton.addEventListener("click", function () {
+						window.open(CLIENT_URL, "_blank");
+					});
+				})
+				.catch((error) => {
+					console.error("Error:", error);
+					const clientButton = document.getElementById("client-site-btn");
+					clientButton.disabled = true;
+					clientButton.textContent = "Error";
+					clientButton.style.backgroundColor = "red";
+					clientButton.style.border = "1px solid red";
+				});
+
+			// Fetch database connection status
+			fetch("/db")
+				.then((response) => {
+					if (!response.ok) {
+						throw Error(response.statusText);
+					}
+					setTimeout(function () {
+						dbStatus.textContent = "Connected";
+						dbStatus.style.color = "#59d7ee";
+					}, 1000);
+				})
+				.catch((error) => {
+					console.error("Error:", error);
+					setTimeout(function () {
+						dbStatus.textContent = "Disconnected";
+						dbStatus.style.color = "red";
+					}, 1000);
+				});
+
+			// Reload page every 30 seconds to check connections
+			setTimeout(function () {
+				location.reload();
+			}, 30000);
+		</script>
+	</body>
+</html>
