@@ -1,0 +1,44 @@
+.menu-icon {
+	height: 34px;
+	width: 34px;
+}
+
+.menu-mobile {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100vh;
+	background-color: var(--primary-very-dark);
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(100%);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	z-index: 100;
+}
+
+.menu-mobile-open {
+	transform: translateX(0);
+}
+
+.menu-mobile-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 40px;
+	padding-top: 40px;
+}
+
+.menu-mobile-content h2 {
+	transition: all 0.3s ease-in-out;
+}
+
+.menu-mobile-content h2 {
+	font-size: 28px;
+}
+
+.menu-mobile-selected {
+	color: var(--primary);
+}

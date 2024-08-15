@@ -1,0 +1,49 @@
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	gap: 20px;
+	padding: 20px;
+}
+
+.home-card {
+	border: 2px solid var(--primary-gray);
+	padding: 20px;
+	height: 230px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 3px;
+}
+
+.home-card h2 {
+	letter-spacing: 4px;
+}
+
+.home-card button,
+.home-card input {
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	background-color: var(--primary);
+	padding: 12px 24px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.home-card input {
+	cursor: text;
+}
+
+.home-card input::placeholder {
+	color: var(--primary-white);
+	text-align: center;
+}
+
+.home-card button:hover {
+	background-color: var(--primary-light);
+}
