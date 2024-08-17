@@ -2,11 +2,12 @@
 	width: 100%;
 	min-height: 100vh;
 	height: 100%;
-	font-family: MonstroSolid, sans-serif;
+	font-family: DukeFill, sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	position: relative;
-	padding-top: 76px;
+	overflow-x: hidden;
+	display: flex;
+	animation: fade-in 0.5s ease-in-out;
 }
 
 .four-oh-four {

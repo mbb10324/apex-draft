@@ -1,0 +1,37 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	background-color: var(--primary-cream);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--primary-very-dark);
+	z-index: 1;
+}
+
+.footer-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding: 20px 80px;
+	text-align: center;
+}
+
+.footer p {
+	font-size: 20px;
+}
+
+.footer h4 {
+	font-family: OpenSans-SemiBold, sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.footer h4:hover {
+	color: var(--primary);
+}

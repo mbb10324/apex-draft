@@ -1,0 +1,7 @@
+.layout {
+	display: flex;
+	flex-direction: column;
+	padding-top: 109px;
+	position: relative;
+	flex-grow: 1;
+}

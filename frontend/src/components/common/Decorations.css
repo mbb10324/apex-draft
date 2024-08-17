@@ -1,0 +1,16 @@
+.decoration {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	box-shadow: 0 0 400px 250px var(--primary-very-dark);
+}
+
+.decoration-1 {
+	bottom: 0;
+	left: 0;
+}
+
+.decoration-2 {
+	top: 0;
+	right: 0;
+}

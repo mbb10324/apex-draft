@@ -1,0 +1,20 @@
+.draft-input {
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	background-color: var(--primary);
+	padding: 12px 24px;
+	font-size: 20px;
+	font-family: OpenSans-SemiBold, sans-serif;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.draft-input {
+	cursor: text;
+}
+
+.draft-input::placeholder {
+	color: var(--primary-white);
+	text-align: center;
+}

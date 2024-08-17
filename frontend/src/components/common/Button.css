@@ -1,0 +1,15 @@
+.draft-button {
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	background-color: var(--primary);
+	padding: 12px 24px;
+	font-family: OpenSans-SemiBold, sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.draft-button:hover {
+	background-color: var(--primary-light);
+}

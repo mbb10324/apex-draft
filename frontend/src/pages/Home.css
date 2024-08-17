@@ -4,15 +4,17 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100vw;
-	gap: 20px;
+	gap: 40px;
 	padding: 20px;
+	height: 100%;
+	z-index: 1;
 }
 
 .home-card {
 	border: 2px solid var(--primary-gray);
-	padding: 20px;
-	height: 230px;
-	width: 300px;
+	padding: 40px;
+	height: 280px;
+	width: 340px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -23,7 +25,6 @@
 	letter-spacing: 4px;
 }
 
-.home-card button,
 .home-card input {
 	border-radius: 3px;
 	outline: none;
@@ -42,8 +43,4 @@
 .home-card input::placeholder {
 	color: var(--primary-white);
 	text-align: center;
-}
-
-.home-card button:hover {
-	background-color: var(--primary-light);
 }

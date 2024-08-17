@@ -10,7 +10,7 @@
 	width: 50%;
 	height: 100vh;
 	background-color: var(--primary-very-dark);
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.4s ease-in-out;
 	transform: translateX(100%);
 	padding: 20px;
 	display: flex;
@@ -33,10 +33,6 @@
 
 .menu-mobile-content h2 {
 	transition: all 0.3s ease-in-out;
-}
-
-.menu-mobile-content h2 {
-	font-size: 28px;
 }
 
 .menu-mobile-selected {

@@ -18,6 +18,7 @@
 	--primary-dark: #161616;
 	--primary-very-dark: #000000;
 	--primary-white: #f3f3f3;
+	--primary-cream: #d9d3cc;
 	--primary-gray: #7a7a7a;
 	--primary: #da292a;
 	--primary-light: #da292a90;
@@ -37,23 +38,23 @@ html {
 }
 
 h1 {
-	font-family: MonstroSolid, sans-serif;
-	font-size: 32px;
+	font-family: DukeFill, sans-serif;
+	font-size: 44px;
 }
 
 h2 {
-	font-family: MonstroSolid, sans-serif;
-	font-size: 28px;
+	font-family: DukeFill, sans-serif;
+	font-size: 40px;
 }
 
 h3 {
-	font-family: MonstroSolid, sans-serif;
-	font-size: 24px;
+	font-family: DukeFill, sans-serif;
+	font-size: 36px;
 }
 
 h4 {
-	font-family: MonstroSolid, sans-serif;
-	font-size: 20px;
+	font-family: DukeFill, sans-serif;
+	font-size: 32px;
 }
 
 p {
@@ -62,11 +63,20 @@ p {
 }
 
 @font-face {
-	font-family: "MonstroSolid";
-	src: url("./fonts/MonstroSolid.woff") format("woff");
+	font-family: "OpenSans-SemiBold";
+	src: url("./fonts/TitilliumWeb-SemiBold.ttf") format("woff");
 }
 
 @font-face {
-	font-family: "OpenSans-SemiBold";
-	src: url("./fonts/OpenSans-Semibold.woff") format("woff");
+	font-family: "DukeFill";
+	src: url("./fonts/DukeFill.woff") format("woff");
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
