@@ -1,8 +1,8 @@
+import Decorations from "../components/common/Decorations.tsx";
+import Header from "../components/header/Header.tsx";
+import Footer from "../components/footer/Footer.tsx";
 import { useState } from "react";
-import Footer from "../components/footer/Footer";
-import Header from "../components/header/Header";
 import "./Layout.css";
-import Decorations from "../components/common/Decorations";
 
 type LayoutProps = {
 	children: React.ReactNode;

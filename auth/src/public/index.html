@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Auth Server</title>
+	</head>
+	<body>
+		<div class="app">
+			<img src="./auth.png" alt="logo" />
+			<h1>Auth Server Is Running</h1>
+			<h2>- Database <span id="db-status">Connecting...</span> -</h2>
+			<p>This page refreshes every 30 seconds to check api connections.</p>
+			<p>Built with express + nodejs</p>
+			<button id="client-site-btn">Visit Client</button>
+		</div>
+		<script>
+			//================================================
+			// Document target elements
+			const clientButton = document.getElementById("client-site-btn");
+			const dbStatus = document.getElementById("db-status");
+			// Fetch frontend/client URL
+			fetch("/client")
+				.then((response) => response.json())
+				.then((response) => {
+					const CLIENT_URL = response.clientUrl;
+					clientButton.addEventListener("click", function () {
+						window.open(CLIENT_URL, "_blank");
+					});
+					console.log("Client URL:", CLIENT_URL);
+				})
+				.catch(() => {
+					console.error("Error:", "Cannot retrieve client URL");
+					const clientButton = document.getElementById("client-site-btn");
+					clientButton.classList.add("error-button");
+					clientButton.textContent = "Cannot retrieve client URL";
+				});
+			// Fetch database connection status
+			fetch("/db")
+				.then((response) => {
+					if (!response.ok) {
+						throw Error();
+					}
+					console.log("Database:", "Ok");
+					setTimeout(function () {
+						dbStatus.textContent = "Connected";
+					}, 1000);
+				})
+				.catch(() => {
+					console.error("Error:", "Cannot connect to database");
+					setTimeout(function () {
+						dbStatus.textContent = "Disconnected";
+						dbStatus.classList.add("error-text");
+					}, 1000);
+				});
+			// Reload page every 30 seconds to test connections
+			setTimeout(function () {
+				location.reload();
+			}, 30000);
+			//================================================
+		</script>
+	</body>
+</html>

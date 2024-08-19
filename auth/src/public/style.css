@@ -1,0 +1,99 @@
+/* Global styles
+ ========================================================================*/
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+:root {
+	--primary: #4caf50;
+	--secondary: #e4f2eb;
+	--background: #080808;
+	--error: #ff0000;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* App styles
+ ========================================================================*/
+.app {
+	max-width: 1000px;
+	height: 100vh;
+	color: var(--secondary);
+	text-align: center;
+	gap: 20px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	animation: fade-in 0.8s ease-in-out;
+}
+
+.app h1 {
+	font-size: 48px;
+	color: var(--primary);
+}
+
+.app h2 {
+	font-size: 30px;
+}
+
+.app h2 span {
+	transition: all 0.8s ease-in-out;
+}
+
+.app p {
+	font-size: 20px;
+}
+
+.app span {
+	color: var(--primary);
+}
+
+.app button {
+	cursor: pointer;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--background);
+	background-color: var(--primary);
+	border: 1px solid var(--primary);
+	border-radius: 9999px;
+	transition: all 0.3s ease-in-out;
+}
+
+.app button:hover {
+	color: var(--primary);
+	background-color: var(--background);
+}
+
+.error-button {
+	background-color: var(--error) !important;
+	border: 1px solid var(--error) !important;
+	pointer-events: none;
+}
+
+.error-text {
+	color: var(--error) !important;
+}
+
+/* Animations
+ ========================================================================*/
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

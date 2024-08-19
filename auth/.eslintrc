@@ -13,7 +13,6 @@
 		"quotes": ["warn", "double", { "allowTemplateLiterals": true }],
 		"indent": ["warn", "tab", { "SwitchCase": 1 }],
 		"no-tabs": 0,
-		"max-len": ["warn", 120],
-		"no-case-declarations": 0
+		"max-len": ["warn", 120]
 	}
 }

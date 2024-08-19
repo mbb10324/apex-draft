@@ -1,0 +1,29 @@
+{
+	"ts-node": {
+		"require": ["tsconfig-paths/register"]
+	},
+	"compilerOptions": {
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"target": "es6",
+		"noImplicitAny": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"allowJs": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"paths": {
+			"@services/*": ["./src/services/*"],
+			"@routers/*": ["./src/routers/*"]
+		},
+		"skipLibCheck": true
+	},
+	"include": ["src/**/*.ts", "./knexfile.ts"],
+	"exclude": ["node_modules"]
+}

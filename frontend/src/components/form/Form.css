@@ -1,0 +1,127 @@
+/*FORM STYLE
+*********************************************************************************************/
+.form-style {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 20px;
+	transition: all 0.3s ease-in-out;
+	height: auto !important;
+	animation: fade-in 0.3s ease-in-out;
+}
+
+/*INPUT STYLE (COL)
+*********************************************************************************************/
+.input-container {
+	display: flex;
+	flex-direction: column;
+	gap: calc(20 / 3);
+	height: auto !important;
+	width: 100%;
+	transition: all 0.3s ease-in-out !important;
+}
+
+.input-style {
+	font-size: 20px;
+	font-family: OpenSans-SemiBold, sans-serif;
+	border: 1px solid var(--primary-dark);
+	outline: none;
+	border-radius: 3px;
+	padding: 10px;
+	transition: all 0.3s ease-in-out;
+	background-color: var(--primary-dark);
+	color: var(--primary-white);
+}
+
+.input-style:focus {
+	border: 1px solid var(--primary-white);
+}
+
+.input-style:disabled {
+	opacity: 0.4;
+}
+
+/*INPUT STYLE (ROW)
+*********************************************************************************************/
+.input-container-inline {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+/*LABEL STYLE
+*********************************************************************************************/
+.label-style {
+	font-size: 24px;
+	font-family: OpenSans-SemiBold, sans-serif;
+	transition: all 0.3s ease-in-out;
+}
+
+/*ERROR STYLE
+*********************************************************************************************/
+.error-style {
+	color: var(--error);
+	font-size: 16px;
+	animation: fade 0.3s linear;
+}
+
+.input-error {
+	border: 1px solid var(--error) !important;
+}
+
+/*ONE OFFS
+*********************************************************************************************/
+.color-picker-container {
+	height: 30px;
+	width: 30px;
+	border-radius: 9999px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.color-picker-style {
+	outline: none;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 9999px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+}
+
+/* .button-group-selected {
+	border: 2px solid 3px !important;
+	background-color: var(--lemma-colors-secondary) !important;
+	color: var(--lemma-colors-quaternary) !important;
+	pointer-events: none;
+}
+
+.button-group {
+	cursor: pointer;
+	margin-bottom: calc(var(--lemma-forms-padding) / 2);
+	background-color: var(--lemma-colors-quinary);
+	color: var(--lemma-colors-tertiary);
+}
+
+.button-group:hover {
+	border: 2px solid var(--lemma-colors-secondary);
+	background-color: var(--lemma-colors-secondary);
+	color: var(--lemma-colors-quaternary);
+} */
+
+/*ANIMATIONS
+*********************************************************************************************/
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

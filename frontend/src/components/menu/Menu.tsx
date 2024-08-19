@@ -1,6 +1,10 @@
-import useBreakpoints from "../../utils/hooks/useBreakpoint";
-import MenuDesktop from "./MenuDesktop";
-import MenuMobile from "./MenuMobile";
+import { useState } from "react";
+import useBreakpoints from "../../utils/hooks/useBreakpoint.ts";
+import MenuDesktop from "./MenuDesktop.tsx";
+import MenuMobile from "./MenuMobile.tsx";
+import Modal from "../common/Modal.tsx";
+import ClickableBackdrop from "../common/ClickableBackdrop.tsx";
+import AuthFlow from "../../auth/components/AuthFlow.tsx";
 
 export type MenuOption = {
 	label: string;
@@ -9,6 +13,7 @@ export type MenuOption = {
 
 export default function Menu() {
 	const mobile = useBreakpoints(1024);
+	const [showLogin, setShowLogin] = useState(false);
 
 	const menuOptions: MenuOption[] = [
 		{ label: "Home", path: "/" },
@@ -18,5 +23,17 @@ export default function Menu() {
 		{ label: "Contact", path: "/contact" },
 	];
 
-	return mobile ? <MenuMobile menuOptions={menuOptions} /> : <MenuDesktop menuOptions={menuOptions} />;
+	return (
+		<>
+			{mobile ? (
+				<MenuMobile menuOptions={menuOptions} setShowLogin={setShowLogin} />
+			) : (
+				<MenuDesktop menuOptions={menuOptions} setShowLogin={setShowLogin} />
+			)}
+			<Modal showModal={showLogin} setShowModal={setShowLogin}>
+				<AuthFlow />
+			</Modal>
+			<ClickableBackdrop show={showLogin} onClick={() => setShowLogin(false)} zIndex={99} />
+		</>
+	);
 }

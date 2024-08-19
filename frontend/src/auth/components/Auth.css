@@ -1,0 +1,18 @@
+.form-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+}
+
+.form-text-link {
+	color: var(--primary-gray);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.form-text-link:hover {
+	color: var(--primary);
+}

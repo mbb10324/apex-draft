@@ -22,6 +22,7 @@
 	--primary-gray: #7a7a7a;
 	--primary: #da292a;
 	--primary-light: #da292a90;
+	--error: #ff00aa;
 
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-synthesis: none;
@@ -59,7 +60,7 @@ h4 {
 
 p {
 	font-family: OpenSans-SemiBold, sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 @font-face {

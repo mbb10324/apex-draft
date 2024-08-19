@@ -1,4 +1,4 @@
-import Menu from "../menu/Menu";
+import Menu from "../menu/Menu.tsx";
 import "./Header.css";
 
 export default function Header() {

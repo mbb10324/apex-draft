@@ -1,0 +1,6 @@
+/node_modules
+/dist
+z_notes.md
+grid.png
+.env
+firebase.json
